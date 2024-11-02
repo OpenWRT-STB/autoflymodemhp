@@ -42,6 +42,8 @@ Panduan ini menjelaskan langkah-langkah untuk meng-upload dan menjalankan skrip 
 7. **Tambahkan Baris Berikut**
    - Setelahnya, tambahkan:
      ```bash
+     sleep 3
+     /usr/bin/bled -r
      sleep 3 &&
      flymode &&
      ```
