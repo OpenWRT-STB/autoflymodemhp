@@ -4,11 +4,11 @@ Panduan ini menjelaskan langkah-langkah untuk meng-upload dan menjalankan skrip 
 
 ## Prasyarat
 
-- Akses ke perangkat OpenWRT.
-- Hanya untuk modem HP yang sudah Auto ADB
+- Memiliki perangkat OpenWRT baik router atau STB.
+- Sumber internet hanya untuk modem HP yang sudah Auto ADB.
 - File `flymode` yang sudah siap di-upload.
 - Aplikasi SCP atau FTP untuk transfer file.
-- Bisa juga upload melalui web ui OpenWRT.
+- Bisa juga upload langsung melalui web ui OpenWRT.
 
 ## Langkah-langkah
 
