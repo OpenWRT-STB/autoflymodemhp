@@ -1,0 +1,56 @@
+#!/bin/bash
+# By Bang edoll
+# Ini gratis ya, kalo ada yang jual hoax
+# program ini melakukan tes dengan mengirimkan payload Head
+# dan akan dinyatakan online ketika url target merespon
+
+# Konfigurasi URL untuk pengecekan koneksi (disarankan bing, karena cepat mendapatkan respon)
+URL="http://bing.com"
+
+# Fungsi untuk cek koneksi
+# dinyatakan timeout dalam 3 detik
+check_connection() {
+    curl -X "HEAD" --connect-timeout 3 -so /dev/null "$URL"
+}
+
+# Fungsi untuk mengaktifkan mode pesawat
+enable_airplane_mode() {
+    adb shell settings put global airplane_mode_on 1
+    adb shell am broadcast -a android.intent.action.AIRPLANE_MODE --ez state true
+}
+
+# Fungsi untuk menonaktifkan mode pesawat
+disable_airplane_mode() {
+    adb shell settings put global airplane_mode_on 0
+    adb shell am broadcast -a android.intent.action.AIRPLANE_MODE --ez state false
+}
+
+while true; do
+    if check_connection; then
+        echo "Koneksi internet aktif."
+    else
+        echo "Koneksi internet tidak aktif. Mencoba mereset jaringan..."
+
+        # Aktifkan mode pesawat
+        enable_airplane_mode
+        echo "Mode pesawat diaktifkan..."
+        sleep 5  # Tunggu 5 detik
+
+        # Nonaktifkan mode pesawat
+        disable_airplane_mode
+        echo "Mode pesawat dinonaktifkan..."
+
+        # Tunggu beberapa detik untuk pemulihan koneksi
+        sleep 15
+
+        # Cek kembali koneksi setelah mencoba mereset jaringan
+        if check_connection; then
+            echo "Jaringan berhasil direset dan koneksi aktif."
+        else
+            echo "Gagal mereset jaringan. Koneksi masih tidak aktif."
+        fi
+    fi
+
+    # Tunggu beberapa detik sebelum pengecekan berikutnya
+    sleep 5
+done
