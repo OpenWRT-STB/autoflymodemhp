@@ -2,6 +2,9 @@
 
 Panduan ini menjelaskan langkah-langkah untuk meng-upload dan menjalankan skrip `flymode` di OpenWRT.
 
+## Fungsi
+Melakukan pengecekan internet melalui GET payload (loop), kemudian menjalankan perintah untuk me-restart jaringan apabila terdeteksi error saat melakukan GET.
+
 ## Prasyarat
 
 - Memiliki perangkat OpenWRT baik router atau STB.
