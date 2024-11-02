@@ -33,8 +33,8 @@ Panduan ini menjelaskan langkah-langkah untuk meng-upload dan menjalankan skrip 
    - Akses menu `System > Startup > Local Startup` di antarmuka web OpenWRT.
 
 6. **Tambahkan Perintah**
-   - Di Local Startup biasanya terdapat perintah:
-     ```sleep 3
+   - Di Local Startup biasanya terdapat perintah:     ```bash
+     sleep 3
      /usr/bin/bled -r
      ```
 
