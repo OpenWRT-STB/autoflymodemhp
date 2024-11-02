@@ -5,13 +5,15 @@ Panduan ini menjelaskan langkah-langkah untuk meng-upload dan menjalankan skrip 
 ## Prasyarat
 
 - Akses ke perangkat OpenWRT.
+- Hanya untuk modem HP yang sudah Auto ADB
 - File `flymode` yang sudah siap di-upload.
 - Aplikasi SCP atau FTP untuk transfer file.
+- Bisa juga upload melalui web ui OpenWRT.
 
 ## Langkah-langkah
 
 1. **Upload File ke OpenWRT**
-   - Gunakan SCP atau FTP untuk meng-upload file `flymode` ke direktori `/usr/bin` di OpenWRT.
+   - Upload file `flymode` ke direktori `/usr/bin` di OpenWRT.
 
 2. **Set Permission**
    - Buka terminal dan jalankan perintah berikut untuk memberikan hak eksekusi pada file:
@@ -26,7 +28,7 @@ Panduan ini menjelaskan langkah-langkah untuk meng-upload dan menjalankan skrip 
      ```
 
 4. **Periksa Error**
-   - Jika terdapat error, salin pesan error dan kirim ke [wa.me/+62881011068651](https://wa.me/+62881011068651). 
+   - Jika terdapat error, screenshot pesan error dan kirim ke [WhatsApp](https://wa.me/+62881011068651). 
    - Jika tidak ada error dan muncul pemeriksaan jaringan, lanjut ke langkah berikutnya.
 
 5. **Masuk ke Local Startup**
@@ -49,7 +51,8 @@ Panduan ini menjelaskan langkah-langkah untuk meng-upload dan menjalankan skrip 
      ```
 
 8. **Simpan dan Terapkan**
-   - Simpan perubahan dan reboot perangkat jika diperlukan.
+   - Simpan perubahan dan reboot perangkat.
+   - Scriptnya akan berjalan auto di layar belakang.
 
 ## Catatan
 
