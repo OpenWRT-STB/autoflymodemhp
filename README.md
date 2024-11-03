@@ -31,7 +31,7 @@ Melakukan pengecekan internet melalui GET payload (loop), kemudian menjalankan p
      ```
 
 4. **Periksa Error**
-   - Jika terdapat error, screenshot pesan error dan kirim ke [WhatsApp](https://wa.me/+62881011068651). 
+   - Jika terdapat error, segera laporkan issue.
    - Jika tidak ada error dan muncul pemeriksaan jaringan, lanjut ke langkah berikutnya.
 
 5. **Masuk ke Local Startup**
